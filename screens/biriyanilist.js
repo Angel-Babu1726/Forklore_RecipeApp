@@ -4,17 +4,15 @@ import { StyleSheet, Image, ImageBackground, Text, View,FlatList,TouchableOpacit
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const First = [
-    { id: '1', title: 'Biriyani', image: require('../Assets/biriyani.jpg') },
-    { id: '2', title: 'Soup', image: require('../Assets/soup.jpg') },
-    { id: '3', title: 'Pizza', image: require('../Assets/pizza.jpg') },
-    { id: '4', title: 'Dosa', image: require('../Assets/dosa.jpg') },
-    { id: '5', title: 'Chicken', image: require('../Assets/chicken.jpg') },
-    { id: '6', title: 'Rolls', image: require('../Assets/rolls.jpg') },
-    { id: '7', title: 'Cake', image: require('../Assets/cake.jpg') },
-    { id: '8', title: 'Payasam', image: require('../Assets/payasam.jpeg') },
-    { id: '9', title: 'Shake', image: require('../Assets/shake.jpeg') },
-    { id: '10', title: 'Halwa', image: require('../Assets/halwa.jpg') },
-    { id: '11', title: 'Noodles', image: require('../Assets/noodles.jpg') },
+    { id: '1', title: 'Kolkata Biriyani', image: require('../Assets/biriyani.jpg') },
+    { id: '2', title: 'Malabar Biryani', image: require('../Assets/soup.jpg') },
+    { id: '3', title: 'Hyderabadi Biryani', image: require('../Assets/pizza.jpg') },
+    { id: '4', title: 'Bhatkali Biryani', image: require('../Assets/dosa.jpg') },
+    { id: '5', title: 'Ambur style Biryani', image: require('../Assets/chicken.jpg') },
+    { id: '6', title: 'Egg Roast Biriyani', image: require('../Assets/rolls.jpg') },
+    { id: '7', title: 'Veg Biriyani', image: require('../Assets/cake.jpg') },
+    { id: '8', title: 'Lucknowi Biryani', image: require('../Assets/payasam.jpeg') },
+   
   ];
 
 
@@ -40,12 +38,12 @@ const BiriyaniList = () => {
             <FlatList
                     data={First}
                     keyExtractor={item => item.id}
-                    renderItem={({ item, index }) => (
-                        <TouchableOpacity onPress={() => handlePress(item)}>
+                    renderItem={({ item }) => (
+                        <TouchableOpacity>
                             <View style={styles.box}>
 
                                 <View style={styles.container2}>
-                                    <Text style={styles.head}>{item.title}</Text>
+                                    <Text style={styles.texthead}>{item.title}</Text>
                                    
                                 </View>
 
@@ -65,14 +63,15 @@ const styles = StyleSheet.create({
     },
     ellipse: {
         width: 380,
-        height: 340
+        height: 340,
+        
     },
     head: {
         color: 'white',
         fontWeight: '600',
         fontSize: 24,
-        paddingLeft:20
-
+        paddingLeft:90,
+        
     },
     image: {
         width: 220,
@@ -103,7 +102,7 @@ const styles = StyleSheet.create({
         flex: 1,
         marginLeft: 30,
     },
-    head: {
+    texthead: {
         color: 'black',
         fontWeight: '700',
         fontSize: 16,

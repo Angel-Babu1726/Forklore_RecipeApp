@@ -6,7 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 const First = [
-  { id: '1', title: 'Biriyani', image: require('../Assets/biriyani.jpg') ,screen:'biriyanilist'},
+  { id: '1', title: 'Biriyani', image: require('../Assets/biriyani.jpg') ,screen: 'biriyanilist'},
   { id: '2', title: 'Soup', image: require('../Assets/soup.jpg') },
   { id: '3', title: 'Pizza', image: require('../Assets/pizza.jpg') },
   { id: '4', title: 'Dosa', image: require('../Assets/dosa.jpg') },
