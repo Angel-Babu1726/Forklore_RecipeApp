@@ -10,6 +10,7 @@ import OnboardingTwo from '../screens/onboarding2';
 import OnboardingThree from '../screens/onboarding3';
 import ListOfItems from '../screens/listofitems';
 import BiriyaniList from '../screens/biriyanilist';
+import ThomasScreen from '../screens/Thomasscreen';
 
 const Stack = createStackNavigator();
 
@@ -33,6 +34,7 @@ function StackNavigation() {
       <Stack.Screen name="MyTabs" component={MyTabs} options={{headerShown:false}}/>
       <Stack.Screen name="listofitems" component={ListOfItems} options={{headerShown:false}}/>
       <Stack.Screen name="biriyanilist" component={BiriyaniList} options={{headerShown:false}}/>
+      <Stack.Screen name="thomasscreen" component={ThomasScreen} options={{headerShown:false}}/>
 
      
 

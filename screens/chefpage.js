@@ -3,7 +3,7 @@ import { View, FlatList, Text, StyleSheet, ImageBackground, TouchableOpacity } f
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const First = [
-    { id: '1', title: 'Thomas Keller', image: require('../Assets/thomasimg.jpeg') },
+    { id: '1', title: 'Thomas Keller', image: require('../Assets/thomasimg.jpeg'), screen: 'thomasscreen' },
     { id: '2', title: 'Vikash Khanna', image: require('../Assets/vikaskhanna.jpeg') },
     { id: '3', title: 'Chef Pillai', image: require('../Assets/chefpillaiimg.jpeg') },
     { id: '4', title: 'Pankaja Bhadouria', image: require('../Assets/pankaja.jpeg') },
@@ -28,11 +28,12 @@ const Second = [
     { id: '10', title: 'Chef Pillai', image: require('../Assets/chefpillaiimg.jpeg') },
 ];
 
-const ChefScreen = () => {
+const ChefScreen = ({navigation}) => {
 
-    const handlePress = (item) => {
-        item.title;
-    };
+   
+    const chefhandlePress = (screen) => {
+        navigation.navigate(screen);
+      };
 
     return (
         <SafeAreaView style={styles.container}>
@@ -43,7 +44,7 @@ const ChefScreen = () => {
                 keyExtractor={item => item.id}
                 horizontal={true}
                 renderItem={({ item }) => (
-                    <TouchableOpacity onPress={() => handlePress(item)}
+                    <TouchableOpacity onPress={() => chefhandlePress(item.screen)}
                    
                     >
                         <View style={styles.box}>
@@ -60,7 +61,7 @@ const ChefScreen = () => {
                 keyExtractor={item => item.id}
                 horizontal={true}
                 renderItem={({ item }) => (
-                    <TouchableOpacity onPress={() => handlePress(item)}>
+                    <TouchableOpacity onPress={() => chefhandlePress(item.screen)}>
                         <View style={styles.box}>
                             <ImageBackground source={item.image} style={styles.images} >
                                 <Text style={styles.chef1}>{item.title}</Text>
