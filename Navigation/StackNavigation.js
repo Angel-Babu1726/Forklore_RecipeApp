@@ -11,6 +11,8 @@ import OnboardingThree from '../screens/onboarding3';
 import ListOfItems from '../screens/listofitems';
 import BiriyaniList from '../screens/biriyanilist';
 import ThomasScreen from '../screens/Thomasscreen';
+import ContentScreen from '../screens/contentscreen';
+import ThomasSignatureDishes from '../screens/thomassignature';
 
 const Stack = createStackNavigator();
 
@@ -35,7 +37,8 @@ function StackNavigation() {
       <Stack.Screen name="listofitems" component={ListOfItems} options={{headerShown:false}}/>
       <Stack.Screen name="biriyanilist" component={BiriyaniList} options={{headerShown:false}}/>
       <Stack.Screen name="thomasscreen" component={ThomasScreen} options={{headerShown:false}}/>
-
+      <Stack.Screen name="contentscreen" component={ContentScreen} options={{headerShown:false}}/>
+      <Stack.Screen name="thomassignature" component={ThomasSignatureDishes} options={{headerShown:false}}/>
      
 
       

@@ -15,7 +15,7 @@ const ThomasScreen = ({ navigation }) => {
         <Text style={styles.head}>Thomas Keller</Text>
         <Text style={styles.subhead}>American chef and restaurateur
         </Text>
-        <TouchableOpacity style={styles.button} >
+        <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate('thomassignature')} >
           <Text style={styles.btntext}>Explore
 
 
